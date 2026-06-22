@@ -60,6 +60,6 @@ class RLConfig:
     N_STEPS: int = 2048
     BATCH_SIZE: int = 256
     GAMMA: float = 0.99
-    
+
     # SEED
     # SEED = 42

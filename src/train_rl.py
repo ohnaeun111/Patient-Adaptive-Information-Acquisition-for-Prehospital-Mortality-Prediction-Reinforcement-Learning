@@ -35,14 +35,14 @@ def set_global_seed(seed):
 
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
-    
+
 def mask_fn(env: FeatureAcquisitionEnv):
     return env._action_mask()
 
 
 def main():
     # set_global_seed(SEED)
-    
+
     P = Paths()
     C = RLConfig()
     set_global_seed(C.RANDOM_SEED)

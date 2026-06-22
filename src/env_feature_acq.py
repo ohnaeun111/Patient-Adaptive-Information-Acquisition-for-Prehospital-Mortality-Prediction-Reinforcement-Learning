@@ -298,7 +298,7 @@ class FeatureAcquisitionEnv(gym.Env):
 
         self.initial_loss = self._current_loss()
         return self._obs(), {}
-    
+
 
     def step(self, action: int):
         if self.done:
