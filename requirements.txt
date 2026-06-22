@@ -1,0 +1,10 @@
+gymnasium
+joblib
+matplotlib
+numpy
+openpyxl
+pandas
+sb3-contrib
+scikit-learn
+stable-baselines3
+torch
