@@ -318,10 +318,6 @@ For each patient episode, the environment:
 
 Evaluates the learned policy on the validation set during training.
 
-The callback:
-
-- runs the deterministic policy for every validation patient;
-- calculates the mean class-weighted log loss;
 - saves the policy when validation performance improves; and
 - stops training after the configured number of evaluations without
   improvement.
