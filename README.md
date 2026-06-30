@@ -321,9 +321,3 @@ Evaluates the learned policy on the validation set during training.
 - saves the policy when validation performance improves; and
 - stops training after the configured number of evaluations without
   improvement.
-
-## Research-use notice
-
-This repository contains retrospective research code. It is not a medical
-device and must not be used for clinical diagnosis, triage, or treatment
-decisions.
