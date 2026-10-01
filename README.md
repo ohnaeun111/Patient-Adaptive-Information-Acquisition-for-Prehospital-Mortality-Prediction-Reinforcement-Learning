@@ -70,16 +70,25 @@ The environment combines these two components using:
 ```python
 np.concatenate([x_known, mask.astype(np.float32)])
 
-### Action space
+## Action Space
 
-The action space contains 22 actions:
+The environment contains 22 discrete actions:
 
 - 21 clinical feature-group acquisition actions; and
-- one `STOP` action.
+- 1 explicit `STOP` action.
 
-Selecting a feature-group action reveals the corresponding values from the
-linked all-feature record. Selecting `STOP` ends the episode using the
-currently available information.
+```text
+0-20 : acquire one clinical feature group
+21   : STOP
+```
+
+Selecting a feature-group action reveals all preprocessed predictor-input
+variables belonging to that group.
+
+The `STOP` action terminates additional information acquisition.
+
+Importantly, `STOP` is not a mortality-prediction action. Final mortality
+prediction is always performed by the fixed prediction model.
 
 ### Maskable PPO
 
