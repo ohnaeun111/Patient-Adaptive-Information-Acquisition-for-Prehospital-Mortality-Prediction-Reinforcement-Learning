@@ -90,19 +90,6 @@ The `STOP` action terminates additional information acquisition.
 Importantly, `STOP` is not a mortality-prediction action. Final mortality
 prediction is always performed by the fixed prediction model.
 
-### Maskable PPO
-
-The valid action set changes across patients and acquisition steps. A feature
-group cannot be selected when it:
-
-- was already available in the initial call-derived state;
-- has already been acquired; or
-- is not eligible for acquisition under the defined missingness rules.
-
-Maskable PPO removes these invalid actions from the policy distribution. The
-agent therefore chooses only among the currently available acquisition actions
-and `STOP`.
-
 ### Reward
 
 An acquisition is rewarded when the newly obtained information improves the
