@@ -67,12 +67,6 @@ The reinforcement-learning observation contains:
 - the currently known model-input values; and
 - a binary observation mask.
 
-The observation is represented as:
-
-\[
-s_t = [x_t, m_t]
-\]
-
 where:
 
 - \(x_t \in \mathbb{R}^{d}\) is the currently available model-input vector; and
