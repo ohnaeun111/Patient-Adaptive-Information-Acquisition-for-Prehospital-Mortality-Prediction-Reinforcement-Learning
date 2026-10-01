@@ -39,15 +39,24 @@ For each patient, the acquisition process is:
 5. Recalculate the mortality prediction using the updated information.
 6. Repeat until `STOP` is selected or the maximum acquisition limit is reached.
 
-### State
+## State
 
-The reinforcement-learning state contains:
+### Initial information state
 
-- the currently available model-input values; and
-- a binary observation mask indicating which inputs are currently known.
+Two aligned representations are used for each patient:
 
-The state is order-independent. Acquisition paths that result in the same
-observed values and feature mask are represented as the same state.
+- **ALL**: the structured record containing the available prehospital
+  information for the patient.
+- **CALL**: the partially observed representation constructed from information
+  available in the pre-arrival emergency call.
+
+The ALL and CALL records are aligned using the patient record key and visit
+date.
+
+The CALL representation determines which clinical feature groups are available
+at episode initialization and which groups remain eligible for additional
+acquisition.
+
 
 ### Action space
 
