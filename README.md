@@ -13,6 +13,10 @@ action.
 The objective is to retain the predictive performance of the fixed mortality
 model while minimizing unnecessary clinical information acquisition.
 
+> **Note:** This repository reflects an earlier development implementation of
+> the framework. Some implementation details may differ from later versions of
+> the manuscript.
+
 ## Framework
 
 ### Patient-specific information acquisition
