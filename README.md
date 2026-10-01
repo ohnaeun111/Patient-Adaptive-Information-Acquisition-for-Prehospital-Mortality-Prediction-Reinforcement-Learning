@@ -30,6 +30,15 @@ the information currently available for an individual patient and decides:
 The mortality predictor remains frozen during reinforcement-learning training.
 Only the information supplied to the predictor changes.
 
+For each patient, the acquisition process is:
+
+1. Construct an initial partially observed state from call-derived information.
+2. Generate a mortality-risk estimate using the fixed prediction model.
+3. Select one currently unavailable clinical feature group or `STOP`.
+4. Reveal the selected feature group from the corresponding complete record.
+5. Recalculate the mortality prediction using the updated information.
+6. Repeat until `STOP` is selected or the maximum acquisition limit is reached.
+
 ### State
 
 The reinforcement-learning state contains:
